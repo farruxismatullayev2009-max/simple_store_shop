@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="nav-left">
+        <li class="logo"><a href="#">Store</a></li>
+
+        <input type="checkbox" id="menu-bar">
+
+        <label for="menu-bar" class="hamburger-menu">
+          <i class="ri-menu-line"></i>
+        </label>
+
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Products</a></li>
+          <li class="nav-item"><a href="#">Categories</a></li>
+        </ul>
+      </div>
+
+      <ul class="nav-right">
+        <li class="nav-icon">
+          <a href="#"><i class="ri-sun-line"></i></a>
+        </li>
+        <li class="nav-icon">
+          <a href="#"><i class="ri-heart-line"></i></a>
+        </li>
+        <li class="nav-icon">
+          <a href="#"><i class="ri-shopping-cart-2-line"></i></a>
+        </li>
+        <button class="login-btn">
+          <i class="ri-user-3-line"></i> <span>Login</span>
+        </button>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="store-section">
+      <div class="container">
+        <h1 class="store-title">Online Store</h1>
+
+        <div class="search-container">
+
+          <div class="search-wrapper">
+            <button class="store-btn search-btn">
+              <i class="ri-search-line"></i>
+            </button>
+            <input type="text" class="store-input" placeholder="Search products...">
+          </div>
+
+          <button class="store-btn filter-btn">
+            <i class="ri-filter-2-line"></i>
+            Filter
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="container flex" id="products-container"></div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+  
+      <div class="footer-grid">
+  
+        <div class="footer-col">
+          <h3 class="footer-title">Store</h3>
+          <p class="footer-text">
+            Your one-stop shop for all your shopping needs. Quality products, competitive prices, and exceptional service.
+          </p>
+          <div class="footer-socials">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-youtube-line"></i></a>
+          </div>
+        </div>
+  
+        <div class="footer-col">
+          <h3 class="footer-title">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h3 class="footer-title">Account</h3>
+          <ul class="footer-links">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Order History</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact">
+            <li><i class="ri-map-pin-line"></i> <span>123 Shopping Street, Retail City, 10001</span></li>
+            <li><i class="ri-phone-line"></i> <span>(123) 456-7890</span></li>
+            <li><i class="ri-mail-line"></i> <span>info@store.com</span></li>
+          </ul>
+        </div>
+  
+      </div>
+  
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Store. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping Policy</a>
+        </div>
+      </div>
+  
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

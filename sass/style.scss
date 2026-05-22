@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// --- O'ZGARUVCHILAR ---
+$bg-dark: #020817;
+$border-color: #1e293b;
+$text-muted: #64748b;
+$text-white: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: $bg-dark;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+// --- NAVBAR ---
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid #1e293b;
+  padding: 15px 0;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(12px);
+  background-color: rgba(2, 8, 23, 0.85);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .logo {
+      a {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-item {
+      a {
+        font-size: 15px;
+        color: #fff;
+        transition: 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+        }
+      }
+    }
+
+    #menu-bar {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: none;
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .nav-icon {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 15px;
+        font-size: 17px;
+        color: #fff;
+        border-radius: 8px;
+        transition: 0.3s;
+
+        &:hover {
+          background: #1e293b;
+        }
+      }
+    }
+
+    .login-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      background: transparent;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #1e293b;
+      }
+    }
+  }
+}
+
+// --- STORE HEADER QISMI ---
+.store-title {
+  color: #fff;
+  font-size: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: transparent;
+    padding-left: 15px;
+    transition: border-color 0.3s;
+
+    &:focus-within {
+      border-color: lighten($border-color, 15%);
+    }
+
+    .search-btn {
+      background: none;
+      border: none;
+      color: $text-muted;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-right: 10px;
+    }
+
+    .store-input {
+      width: 100%;
+      padding: 12px 0;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: $text-white;
+      font-size: 15px;
+
+      &::placeholder {
+        color: $text-muted;
+      }
+    }
+  }
+
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    color: $text-white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      background 0.3s,
+      border-color 0.3s;
+
+    i {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+}
+
+// --- MAHSULOTLAR GRIDI VA KARTALARI ---
+.products-section {
+  padding-top: 30px;
+
+  // JS dan kelayotgan konteyner (20 ta kartani chiroyli taxlaydi)
+  .container.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.card {
+  width: 324px;
+  height: 512px;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  background-color: #050811;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .images {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+
+    img {
+      width: 100%;
+      height: 325px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      .buttons {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(5, 8, 17, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 10px;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      button {
+        background-color: #172237;
+        border: none;
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #253554;
+        }
+      }
+    }
+
+    .like i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #050811;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 3;
+
+      &:hover {
+        background-color: #1e293b;
+      }
+    }
+  }
+
+  .content {
+    padding: 12px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    .title {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .description {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: 4px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .price {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: auto;
+      padding-top: 8px;
+      padding-bottom: 12px;
+    }
+
+    .add-to-cart {
+      width: 100%;
+      background-color: #3b82f6;
+      color: #ffffff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #2563eb;
+      }
+    }
+  }
+}
+
+.main-footer {
+  background-color: #0d1526; // Kartalar bilan bir xil to'q fon
+  border-top: 1px solid #1e293b;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin-top: 60px; // Mahsulotlar bo'limidan masofa ajratish uchun
+
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .footer-col {
+    flex: 1;
+    min-width: 220px; // Mobil qurilmalarda ustunlar chiroyli sinishi uchun
+
+    &:first-child {
+      max-width: 320px; // Birinchi ustun matni juda yoyilib ketmasligi uchun
+    }
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .footer-text {
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  // Ijtimoiy tarmoqlar ikonkalari
+  .footer-socials {
+    display: flex;
+    gap: 18px;
+
+    a {
+      color: #94a3b8;
+      font-size: 18px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  // Linklar ro'yxati (Shop & Account)
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      color: #94a3b8;
+      font-size: 15px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  // Kontakt ma'lumotlari ustuni
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.4;
+
+      i {
+        font-size: 18px;
+        color: #94a3b8;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  // Eng pastki qismi (Copyright & Legal)
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+
+    .copyright {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .bottom-links {
+      display: flex;
+      gap: 24px;
+
+      a {
+        color: #64748b;
+        font-size: 14px;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+&::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(5, 8, 17, 0.7);
+  pointer-events: none; /* Bu joyda to'g'ri yozilgan, lekin... */
+}
+.buttons {
+  position: absolute; /* Bu elementlar kartaning naqd markazini to'sib turibdi */
+  z-index: 2;
+}
