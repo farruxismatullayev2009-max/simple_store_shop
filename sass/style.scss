@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-// --- O'ZGARUVCHILAR ---
+
 $bg-dark: #020817;
 $border-color: #1e293b;
 $text-muted: #64748b;
@@ -386,11 +386,11 @@ body {
 }
 
 .main-footer {
-  background-color: #0d1526; // Kartalar bilan bir xil to'q fon
+  background-color: #0d1526; 
   border-top: 1px solid #1e293b;
   padding-top: 60px;
   padding-bottom: 30px;
-  margin-top: 60px; // Mahsulotlar bo'limidan masofa ajratish uchun
+  margin-top: 60px; 
 
   .footer-grid {
     display: flex;
@@ -403,10 +403,10 @@ body {
 
   .footer-col {
     flex: 1;
-    min-width: 220px; // Mobil qurilmalarda ustunlar chiroyli sinishi uchun
+    min-width: 220px; 
 
     &:first-child {
-      max-width: 320px; // Birinchi ustun matni juda yoyilib ketmasligi uchun
+      max-width: 320px; 
     }
   }
 
@@ -424,7 +424,7 @@ body {
     margin-bottom: 20px;
   }
 
-  // Ijtimoiy tarmoqlar ikonkalari
+ 
   .footer-socials {
     display: flex;
     gap: 18px;
@@ -440,7 +440,7 @@ body {
     }
   }
 
-  // Linklar ro'yxati (Shop & Account)
+ 
   .footer-links {
     display: flex;
     flex-direction: column;
@@ -457,7 +457,7 @@ body {
     }
   }
 
-  // Kontakt ma'lumotlari ustuni
+  
   .footer-contact {
     display: flex;
     flex-direction: column;
@@ -479,7 +479,7 @@ body {
     }
   }
 
-  // Eng pastki qismi (Copyright & Legal)
+  
   .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -514,9 +514,9 @@ body {
   content: '';
   position: absolute;
   background-color: rgba(5, 8, 17, 0.7);
-  pointer-events: none; /* Bu joyda to'g'ri yozilgan, lekin... */
+  pointer-events: none; 
 }
 .buttons {
-  position: absolute; /* Bu elementlar kartaning naqd markazini to'sib turibdi */
+  position: absolute; 
   z-index: 2;
 }

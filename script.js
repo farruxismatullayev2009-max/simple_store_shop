@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Har xil turdagi mahsulotlar bazasi (Rasmga mos: sumka, kiyimlar, uzuklar)
+  
   const baseProducts = [
     {
       title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ];
 
-  // 2. Takrorlanish orqali ro'yxatni roppa-rosa 20 taga yetkazamiz
+  
   const finalProducts = [];
   for (let i = 0; i < 20; i++) {
     finalProducts.push({
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. HTML elementini topib, ichini kartalar bilan to'ldiramiz
+  
   const container = document.getElementById('products-container');
 
   if (container) {
@@ -164,14 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card[data-id]').forEach(card => {
       const id = card.getAttribute('data-id');
 
-      // .images qismiga click
+      
       const imagesDiv = card.querySelector('.images');
       imagesDiv.addEventListener('click', e => {
         if (e.target.closest('.like') || e.target.closest('.buttons')) return;
         window.location.href = 'singlepage.html?id=' + id;
       });
 
-      // Ko'z tugmasi — singlepage ga o'tadi
+      
       const eyeBtn = card.querySelector(
         '.btn-eye, .buttons button:first-child',
       );
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'singlepage.html?id=' + id;
       });
 
-      // .content qismiga click
+      
       const contentDiv = card.querySelector('.content');
       contentDiv.addEventListener('click', e => {
         if (e.target.closest('.add-to-cart')) return;
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('products-container');
   if (!container) return;
 
-  // Navbar counter elementlarini topish
+  
   const navHeartIcon = document.querySelector(
     '.nav-right .nav-icon:nth-child(2) a',
   );
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.nav-right .nav-icon:nth-child(3) a',
   );
 
-  // Counter badge yaratish
+  
   function createBadge(parentEl) {
     const badge = document.createElement('span');
     badge.className = 'nav-badge';
@@ -294,28 +294,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card[data-id]').forEach(card => {
       const id = card.getAttribute('data-id');
 
-      // Rasm qismiga click — singlepage ga o'tadi
+      
       const imagesDiv = card.querySelector('.images');
       imagesDiv.addEventListener('click', e => {
         if (e.target.closest('.like') || e.target.closest('.buttons')) return;
         window.location.href = 'singlepage.html?id=' + id;
       });
 
-      // Ko'z tugmasi — singlepage ga o'tadi
+      
       const eyeBtn = card.querySelector('.btn-eye');
       eyeBtn.addEventListener('click', e => {
         e.stopPropagation();
         window.location.href = 'singlepage.html?id=' + id;
       });
 
-      // Content qismiga click — singlepage ga o'tadi
+      
       const contentDiv = card.querySelector('.content');
       contentDiv.addEventListener('click', e => {
         if (e.target.closest('.add-to-cart')) return;
         window.location.href = 'singlepage.html?id=' + id;
       });
 
-      // Like tugmasi
+     
       const likeBtn = card.querySelector('.like i');
       likeBtn.addEventListener('click', e => {
         e.stopPropagation();
@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateBadge(heartBadge, likeCount);
       });
 
-      // Savatcha tugmasi (karta ichidagi kichik)
+     
       const cartIconBtn = card.querySelector('.btn-cart-icon');
       cartIconBtn.addEventListener('click', e => {
         e.stopPropagation();
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateCartBtn(cartIconBtn);
       });
 
-      // Add to Cart tugmasi
+     
       const addToCartBtn = card.querySelector('.add-to-cart');
       addToCartBtn.addEventListener('click', e => {
         e.stopPropagation();
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Tugmaga qisqa animatsiya
+  
   function animateCartBtn(btn) {
     btn.style.transform = 'scale(0.92)';
     btn.style.transition = 'transform 0.1s';

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? `$${Number(product.price).toFixed(2)}`
       : '$0.00';
 
-    // Yulduzchalar
+    
     const rating = product.rating?.rate || 0;
     const count = product.rating?.count || 0;
     const fullStars = Math.floor(rating);
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
     `;
 
-    // Tabs logic
+    
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     });
 
-    // Quantity logic
+    
     let qty = 1;
     document.getElementById('qty-minus').addEventListener('click', () => {
       if (qty > 1) {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.getElementById('qty-value').textContent = qty;
     });
 
-    // Wishlist toggle
+    
     const wishBtn = document.querySelector('.btn-wish');
     wishBtn.addEventListener('click', () => {
       const icon = wishBtn.querySelector('i');
