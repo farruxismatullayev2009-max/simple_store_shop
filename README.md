@@ -24,7 +24,6 @@ Ecommerce Store â€” bu HTML, SCSS va JavaScript yordamida yaratilgan online doâ€
 ```bash
 styles/
 sass/
-singlepagestyles/
 ```
 
 ## Ishga tushirish
