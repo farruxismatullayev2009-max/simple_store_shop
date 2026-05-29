@@ -122,12 +122,10 @@ body {
 .login-card {
   width: 100%;
   max-width: 460px;
-  background-color: transparent;
+  background-color: #0a1120;
   border: 1px solid #1e293b;
   border-radius: 12px;
-  width: 450px;
-  height: 391px;
-  padding: 25px;
+  padding: 40px 40px 36px 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -142,7 +140,7 @@ body {
 
 .login-subtitle {
   font-size: 14px;
-  color: #94A3B8;
+  color: #64748b;
   margin-top: -8px;
 }
 
@@ -167,7 +165,7 @@ body {
 
 .form-input {
   width: 100%;
-  background-color: transparent;
+  background-color: #0d1626;
   border: 1px solid #1e293b;
   border-radius: 8px;
   padding: 12px 16px;
@@ -178,7 +176,7 @@ body {
   transition: border-color 0.2s;
 
   &::placeholder {
-    color: #94A3B8;
+    color: #475569;
   }
 
   &:focus {
@@ -204,17 +202,18 @@ body {
 
 .error-msg {
   font-size: 12px;
-  color: #ef4444; 
+  color: #ef4444;
+  min-height: 16px;
 }
 
-
+/* SUBMIT BUTTON */
 .login-submit {
   width: 100%;
   background-color: #3b82f6;
-  color: #000000;
+  color: #ffffff;
   border: none;
   padding: 13px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -237,60 +236,6 @@ body {
     font-weight: 500;
     transition: color 0.2s;
     &:hover { color: #60a5fa; }
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar .container { flex-wrap: wrap; }
-
-  .navbar .nav-left {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .navbar .hamburger-menu { display: block; }
-
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #0f172a;
-    border-top: 1px solid #1e293b;
-    border-bottom: 1px solid #1e293b;
-    padding: 15px 0;
-    gap: 0;
-    z-index: 100;
-  }
-
-  .navbar .nav-links .nav-item {
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar .nav-links .nav-item a {
-    display: block;
-    padding: 12px 0;
-    font-size: 17px;
-  }
-
-  .navbar #menu-bar:checked ~ .nav-links { display: flex; }
-
-  .navbar .nav-right {
-    gap: 5px;
-    position: absolute;
-    right: 55px;
-  }
-
-  .navbar .nav-right .nav-icon a { padding: 8px 10px; }
-  .navbar .login-btn { padding: 8px 10px; }
-  .navbar .login-btn span { display: none; }
-
-  .login-card {
-    padding: 28px 20px;
   }
 }
 
@@ -394,4 +339,58 @@ body {
 }
 .main-footer .footer-bottom .bottom-links a:hover {
   color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar .container { flex-wrap: wrap; }
+
+  .navbar .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar .hamburger-menu { display: block; }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+    padding: 15px 0;
+    gap: 0;
+    z-index: 100;
+  }
+
+  .navbar .nav-links .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar .nav-links .nav-item a {
+    display: block;
+    padding: 12px 0;
+    font-size: 17px;
+  }
+
+  .navbar #menu-bar:checked ~ .nav-links { display: flex; }
+
+  .navbar .nav-right {
+    gap: 5px;
+    position: absolute;
+    right: 55px;
+  }
+
+  .navbar .nav-right .nav-icon a { padding: 8px 10px; }
+  .navbar .login-btn { padding: 8px 10px; }
+  .navbar .login-btn span { display: none; }
+
+  .login-card {
+    padding: 28px 20px;
+  }
 }

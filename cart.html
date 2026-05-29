@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./cart.css">
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-left">
+        <li class="logo"><a href="index.html">Store</a></li>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="hamburger-menu"><i class="ri-menu-line"></i></label>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="#">Products</a></li>
+          <li class="nav-item"><a href="#">Categories</a></li>
+        </ul>
+      </div>
+      <ul class="nav-right">
+        <li class="nav-icon"><a href="#"><i class="ri-sun-line"></i></a></li>
+        <li class="nav-icon"><a href="wishlist.html"><i class="ri-heart-line"></i></a></li>
+        <li class="nav-icon"><a href="cart.html"><i class="ri-shopping-cart-2-line"></i></a></li>
+        <button class="login-btn" onclick="window.location.href='loginpage.html'">
+          <i class="ri-user-3-line"></i><span>Login</span>
+        </button>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" id="cart-container"></div>
+  </main>
+
+  <script src="./cart.js"></script>
+</body>
+
+</html>
